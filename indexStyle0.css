@@ -3,22 +3,56 @@ html {
     line-height: 1.6;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(43, 43, 43);
     color: #fff;
   }
+
+
+  #particle-canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+  h1{
+    text-align: center;
+  }
+
   form * {
     font-family: inherit;
     font-size: inherit;
-    
+  }
+
+  .headerContainer{
+    padding: 0;
+    margin: 0;
+    background: rgb(245,233,96);
+    background: linear-gradient(180deg, rgba(245,233,96,0.8) 0%, rgba(255,197,58,0.8) 100%);
+    color: #0f0f0f;
+  }
+
+  .centerThings{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .searchForm{
-    padding-left: 30%;
+    width: 60%;
+    margin: 1em auto;
+    display: block;
+    padding-bottom: 1%
   }
 
   #search{
-    width: 60%;
-    height: 5%;
+    width: 85%;
+    height: 5.5vh;
+    max-height: 50px;
     padding-right: 0%;
     margin-right: 0%;
   }
@@ -28,7 +62,8 @@ html {
     background-color: rgb(20, 20, 20);
     border-color: rgb(87, 87, 87);
     transition: 0.7s;
-    height: 5%;
+    height: 5.5vh;
+    max-height: 50px;
     padding: 0%;
     min-width: 45px;
     margin: 0%;
@@ -42,6 +77,7 @@ html {
 
   .autocomplete{
     position: relative;
+    display: flex;
   }
 
   .autocomplete-items {
@@ -49,11 +85,30 @@ html {
   top: 100%;
   left: 0;
   right: 0;
+  width: 85%;
+  background-color: #fff;
+  border: #000;
+  border-style: solid;
+  border-width: 1px;
   }
+
+  .autocomplete-items div{
+    /*when hovering an item:*/
+    background-color: rgb(223, 223, 223);
+    border: rgb(223, 223, 223);
+    border-style: solid;
+    border-width: 1px;
+    transition: .1s;
+  }
+
   
   .autocomplete-items div:hover {
     /*when hovering an item:*/
     background-color: #e9e9e9;
+    border: #000;
+    border-style: solid;
+    border-width: 1px;
+    transition: 1s;
   }
 
   #hideScroll{
@@ -65,22 +120,6 @@ html {
     /*when navigating through the items using the arrow keys:*/
     background-color: DodgerBlue !important;
     color: #ffffff;
-  }
-
-  .trending{
-    background-color: rgb(25, 25, 25);
-    display: flex;
-    /*flex-wrap: wrap;*/
-    overflow: auto;
-    justify-content: center;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: .5%;
-  }
-
-  .trending figure{
-    padding: 0%;
-    margin: 0% .25% 0% .25%;
   }
 
   .trending img{
@@ -113,8 +152,7 @@ html {
 
 
   .trendingView{
-    padding-left: 49%;
-    cursor: pointer;
+    text-align: center;
   }
   
   .out img{
@@ -170,6 +208,7 @@ html {
     width: auto;
     max-width: 20%;
     margin-left: 40%;
+    text-align: center;
   }
 
   #bottle p:nth-child(6){

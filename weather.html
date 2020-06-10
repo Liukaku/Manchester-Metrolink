@@ -1,31 +1,70 @@
 <html>
     <head>
         <title>
-            Metrolink API Testing
+            Metrolink Times Checker
         </title>
 
         <link rel="stylesheet" href="indexStyle0.css">
+        <link rel="stylesheet" href="particles.css">
     </head>
 
     <body>
-        <main>
-            <span class="trendingView">
-                When's the next tram?
-            </span>
-                <div class="trending" id="trending" >
 
-            </div>
+        <div id="particle-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <main>
+            <div class="headerContainer">
+                <div class="centerThings">
+            <h2 class="trendingView">
+                When's the next tram?
+            </h2>
                         <form autocomplete="off" class="searchForm" onsubmit=""> 
                             <div class="autocomplete">
-                                <input id="search" name="search" type="text" placeholder="Search"/>
+                                <input id="search" name="search" type="text" placeholder="What stop are you starting at?"/>
+                                <button id="btnSearch" type="button" onclick="">
+                                    Search
+                              </button>
+                              <!--
+                              <button id="clear" onclick="">
+                                  Clear
+                              </button>
+                              -->
                             </div>
-                          <button id="btnSearch" type="button" onclick="">
-                              Search
-                        </button>
-                        <button id="clear" onclick="">
-                            Clear
-                        </button>
+
                         </form>
+                    </div>
+            </div> 
+
                         <div class="flex-container">
                             <div class="out" id="out" >
                                 
@@ -37,28 +76,24 @@
                             </div>
 
                             <div id="weatherContainer">
-            <div id="weatherDescription">
+            <div>
                 <h1 id="cityHeader"></h1>
                 <div id="weatherMain">
                     <div id="temperature"></div>
                     <div id="weatherDescriptionHeader"></div>
                     <div><img id="documentIconImg"></div>
                 </div>
-                <hr>
                 <div id="windSpeed" class="bottom-details"></div>
                 <div id="humidity" class="bottom-details"></div>
             </div>
-                            <!--
-                                <table id="bottle">
-                                <tbody id="tableBody">
-
-                                </tbody>
-                            </table>
-                        -->
                         </div>
+                        </div>
+                        
+                        
         </main>
 
-        
+        <script src="stops.js"></script>
+        <script src="newStopsArray.js"></script>
         <script src="metro1.js"></script>
         <script src="weathering.js"></script>
         <script src="metro.js"></script>
