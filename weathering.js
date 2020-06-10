@@ -135,8 +135,17 @@ function setPositionForWeatherInfo() {
 
 document.getElementById('btnSearch').addEventListener('click', () => {
     let searchTerm = document.getElementById('search').value;
-    if(searchTerm)
+        if (searchTerm == "") {
+            searchTerm = document.getElementById('search1').value;
+            return searchTerm
+        }
+        setTimeout(400)
         searchWeather(searchTerm);
+});
+
+document.getElementById('btnSearch1').addEventListener('click', () => {
+    let searchTerm = document.getElementById('search1').value;
+       setTimeout(searchWeather(searchTerm), 4500)
 });
 
 

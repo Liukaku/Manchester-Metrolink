@@ -12,8 +12,7 @@ const xhr = new XMLHttpRequest();
         if (this.readyState == 4) {
             if (xhr.status == 200) {
                       createTimes(); //see metro1.js this is done to clean this doc up
-                      searchWeather(searchTerm);      
-                 
+                    
             }
             if (xhr.status == 404) {
                 console.log('File or resourse not found');
@@ -139,13 +138,20 @@ const xhr = new XMLHttpRequest();
     }
 
     autocomplete(document.getElementById("search"), stopNames);
+    autocomplete(document.getElementById("search1"), stopNames);
 
    
 
     
     document.getElementById('btnSearch').addEventListener('click', () => {
-      
-      let searchBoxWord = document.getElementById('search').value;
+      document.getElementById('overlayScreen').classList.add('hideOptions');
+      document.getElementById('hiddenFormControl').classList.remove('hiddenForm');
+      document.getElementById('hiddenFormControl').classList.add('visibleForm');
+
+
+      var searchBoxWord = document.getElementById('search').value;
+
+    
       let uwuWhatsThis = searchBoxWord.split(' ').pop();
       let theNumbersMason = parseInt(uwuWhatsThis, 10);
       let words = searchBoxWord.split(' ');
@@ -159,5 +165,26 @@ const xhr = new XMLHttpRequest();
       setTimeout( buildrequest(), 500);
     });
     
+    document.getElementById('btnSearch1').addEventListener('click', () => {
+      document.getElementById('overlayScreen').classList.add('hideOptions');
+      document.getElementById('hiddenFormControl').classList.remove('hiddenForm');
+      document.getElementById('hiddenFormControl').classList.add('visibleForm');
+
+
+      var searchBoxWord = document.getElementById('search1').value;
+      let searchTerm = document.getElementById('search1').value;
+    
+      let uwuWhatsThis = searchBoxWord.split(' ').pop();
+      let theNumbersMason = parseInt(uwuWhatsThis, 10);
+      let words = searchBoxWord.split(' ');
+      let wordNumber = words.length - 2;
+      let last3 = uwuWhatsThis;
+
+      xhr.open('GET', proxyURL + 'https://api.tfgm.com/odata/Metrolinks(' + last3 + ')', true);
+      xhr.setRequestHeader("Ocp-Apim-Subscription-Key", APIKEY0);
+      xhr.send();
+      
+      buildrequest();
+    });
 
 
