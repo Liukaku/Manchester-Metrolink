@@ -6,14 +6,14 @@ const proxyURL = "https://cors-anywhere.herokuapp.com/";
 
 const xhr = new XMLHttpRequest();
     console.log(xhr.readyState);
-
     function buildrequest(){
     xhr.onreadystatechange = function(){
+      document.getElementById('overlayScreen').classList.add('goodbyeOverlay');
         if (this.readyState == 4) {
             if (xhr.status == 200) {
                       createTimes(); //see metro1.js this is done to clean this doc up
-                    
-            }
+                      
+            } 
             if (xhr.status == 404) {
                 console.log('File or resourse not found');
             }
@@ -147,7 +147,7 @@ const xhr = new XMLHttpRequest();
       document.getElementById('overlayScreen').classList.add('hideOptions');
       document.getElementById('hiddenFormControl').classList.remove('hiddenForm');
       document.getElementById('hiddenFormControl').classList.add('visibleForm');
-
+      document.getElementById('overlayScreen').classList.add('goodbyeOverlay');
 
       var searchBoxWord = document.getElementById('search').value;
 
@@ -169,7 +169,7 @@ const xhr = new XMLHttpRequest();
       document.getElementById('overlayScreen').classList.add('hideOptions');
       document.getElementById('hiddenFormControl').classList.remove('hiddenForm');
       document.getElementById('hiddenFormControl').classList.add('visibleForm');
-
+      
 
       var searchBoxWord = document.getElementById('search1').value;
       let searchTerm = document.getElementById('search1').value;
@@ -184,6 +184,7 @@ const xhr = new XMLHttpRequest();
       xhr.setRequestHeader("Ocp-Apim-Subscription-Key", APIKEY0);
       xhr.send();
       
+
       buildrequest();
     });
 
