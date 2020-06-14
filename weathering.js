@@ -14,7 +14,7 @@ var ashStops = [
     "Ashton-under-Lyne"
 ];
 
-//this will get the text entered into the search box and determine whether you are searching a place or post code
+//this will get the text entered into the search box and determine whether you are searching a place or post code.
 function getSearchMethod(searchTerm) {
     //if you meet the requirements of a US ZIP Code then search with zip, otherwise use query
     if(searchTerm.length === 5 && Number.parseInt(searchTerm) + '' === searchTerm)

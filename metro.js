@@ -11,7 +11,7 @@ const xhr = new XMLHttpRequest();
       document.getElementById('overlayScreen').classList.add('goodbyeOverlay');
         if (this.readyState == 4) {
             if (xhr.status == 200) {
-                      createTimes(); //see metro1.js this is done to clean this doc up
+                      createTimes(); //see metro1.js this is done to clean this doc up .
                       
             } 
             if (xhr.status == 404) {

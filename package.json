@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Liukaku/delete-me.git"
+    "url": "git+https://github.com/Liukaku/Metrolink-Trams-and-Weather.git"
   },
   "author": "liukaku",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Liukaku/delete-me/issues"
+    "url": "https://github.com/Liukaku/Metrolink-Trams-and-Weather/issues"
   },
-  "homepage": "https://github.com/Liukaku/delete-me#readme"
+  "homepage": "https://github.com/Liukaku/Metrolink-Trams-and-Weather#readme"
 }

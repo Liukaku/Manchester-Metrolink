@@ -15,7 +15,7 @@ function createTimes(){
     let createUpdated = document.createElement("p");
     createStop.textContent = "From " + metroReply.StationLocation;
       //document.getElementsByTagName("p")[0].setAttribute("class", "stopCreated");
-    createTime0.textContent = "Next Tram In " + metroReply.Wait0; //it's .value. for interacting with the array of objects
+    createTime0.textContent = "Next Tram In " + metroReply.Wait0; //it's .value. for interacting with the array of objects.
     createTime1.textContent = "And then " + metroReply.Wait1;
     createTime2.textContent = "and then " + metroReply.Wait2;
     createDest0.textContent = "going to " + metroReply.Dest0;
