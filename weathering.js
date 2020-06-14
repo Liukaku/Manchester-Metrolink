@@ -1,4 +1,4 @@
-const WeatherKey = "ab56078196bb4c1693604bf7bdd7dbfc";
+const WeatherKey = "";
 let units = 'metric';
 let searchMethod;
 var countryCode = "uk";
