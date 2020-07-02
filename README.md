@@ -9,4 +9,4 @@ It will also tell you weather for the destination.
 
 Utilises the metrolink API & OpenWeather API
 
-[LIVE EXAMPLE](http://whenisthenexttram.atwebpages.com/weather.html)
+[LIVE EXAMPLE](http://whenisthenexttram.atwebpages.com/index.html)
